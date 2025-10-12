@@ -1,0 +1,21 @@
+
+.pressureTab {
+  margin: 16px;
+  font-size: 18px;
+}
+.pressureInputSectionClass {
+  display: flex;
+  gap: 8px;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+.pressureInputClass {
+    width: 100px;
+}
+
+.pressureResultsClass {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  line-height: 1.4;
+}

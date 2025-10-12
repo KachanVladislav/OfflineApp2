@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AnaLogovNET</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./pressure.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <main>
+        <div class="headerMain">
+            <img id="logoButton" src="./img/logo.png" alt="logo" width="100">
+            <h1>AnaLogovNET</h1>
+        </div>
+
+        <div id="sideMenu" class="side-menu">
+            <!-- results inserted by JS -->
+        </div>
+        <div id="overlay" class="overlay hidden"></div>
+
+        <section id="pressure" class="pressureTab">
+            <h2>Перевод давления</h2>
+            <div class="pressureInputSectionClass">
+                <label>Значение:</label>
+                <input id="pressureInput" type="number" class="pressureInputClass"/>
+                <select id="pressureUnit"><!-- results inserted by JS --></select>
+            </div>
+            <div id="pressureResults" class="pressureResultsClass">
+                <!-- results inserted by JS -->
+            </div>
+        </section>
+
+        <section id="todo" class="todoTab">
+            <h2>TODO List</h2>
+            <ul>
+                <li>Сделать TODO-list (локальное хранилище, затем сервер)</li>
+                <li>На десктопе меню постоянно сбоку</li>
+                <li>Явно сделать кнопку меню на телефон</li>
+                <li>забыл, не записал</li>
+            </ul>
+        </section>
+
+        <section id="about" class="aboutTabClass">
+            <h2>О приложении</h2>
+            <p>Зачем:</p>
+            <ul>
+                <li>Посмотреть как там html css js поживают (автор не является разработчиком вэб-приложений)</li>
+                <li>Выполнение повседневных задач(расчет, конверация, прочее(уже и забыл, добавить todo-list)) </li>
+                <li>Кроссплатформенность: ну полная, никаких нативных приложений</li>
+                <li>Не использовать фреймворки, чтобы разобраться(на текущий момент)</li>                
+            </ul>
+            <p>Приложение написано с использованием всех доступных средств, включаа ИИ(в частности ChatGPT точно).</p>
+        </section>
+
+        <footer class="footer">
+            <p>© Все права не зачищены.</p>
+        </footer>
+        
+    </main>
+    <script src="pressure.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
+  </body>
+</html>
