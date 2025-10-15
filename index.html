@@ -7,6 +7,7 @@
     <title>AnaLogovNET</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./pressure.css">
+    <link rel="stylesheet" href="./todo.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
   </head>
   <body>
@@ -35,12 +36,15 @@
 
         <section id="todo" class="todoTab">
             <h2>TODO List</h2>
-            <ul>
-                <li>Сделать TODO-list (локальное хранилище, затем сервер)</li>
-                <li>На десктопе меню постоянно сбоку</li>
-                <li>Явно сделать кнопку меню на телефон</li>
-                <li>забыл, не записал</li>
-            </ul>
+            <button id="todoListButtonAdd">Добавить</button>
+            <input id="todoListInputToAdd"></input>
+            <button id="todoListButtonCopyDB">Скопировать базу:)</button>
+            <div id="todoListPathView">
+                <!-- results inserted by JS -->
+            </div>
+            <div id="todoListList">
+                <!-- results inserted by JS -->
+            </div>
         </section>
 
         <section id="about" class="aboutTabClass">
@@ -62,5 +66,8 @@
     </main>
     <script src="pressure.js" type="text/javascript"></script>
     <script src="script.js" type="text/javascript"></script>
+    <script src="todoStorageClass.js" type="text/javascript"></script>
+    <script src="todo.js" type="text/javascript"></script>
+    <!-- <script src="test.js" type="text/javascript"></script> -->
   </body>
 </html>

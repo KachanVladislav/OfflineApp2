@@ -42,4 +42,4 @@ function showTab(tabId) {
     overlay.classList.add('hidden');
 }
 
-showTab('pressure');
+showTab('todo');
