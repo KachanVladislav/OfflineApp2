@@ -2,10 +2,10 @@ class TODOStorageClass
 {
     /**
      * Create new task under idRoot task
-     * @param {string} text - New task name
      * @param {string} idRoot - Id of root task, null for new 1st level root task
+     * @param {*} task - New task
      */
-    createNewTask(text, idRoot){
+    createNewTask(idRoot, task){
         let stored = this.#getStoredDB();
         let root = stored;
         if(idRoot) {
@@ -15,9 +15,8 @@ class TODOStorageClass
             if(!root.todos)
                 root.todos = [];
         }
-        
-        const item = {id : this.#generateId(), text : text};
-        root.todos.push(item);
+        task.id = this.#generateId();
+        root.todos.push(task);
         this.#saveDB(stored);
     }
     /**
@@ -76,24 +75,33 @@ class TODOStorageClass
         this.#saveDB(stored);
     }
     /**
-     * Set tasks complete state by id
-     * @param {string} id - Task id
-     * @param {boolean} state - Complete state
+     * Set tasks attribute value
+     * @param {string} id - Task Id
+     * @param {string} name - Attribute name
+     * @param {string} value - Attribute new value
      */
-    setTaskCopleteStateById(id, state) {
-        function setTuskCompleteNested(obj) {
+    setTaskAttributeValue(id, name, value) {
+        function setNested(obj) {
             if ("id" in obj && obj.id === id) {
-                obj.isCompleted = state;
+                obj[name] = value;
             }
             if ("todos" in obj && obj.todos.length > 0) {
                 obj.todos.forEach(element => {
-                    setTuskCompleteNested(element);
+                    setNested(element);
                 });
             } 
         }
         let stored = this.#getStoredDB();
-        setTuskCompleteNested(stored, null, id, null);       
+        setNested(stored, null, id, null);       
         this.#saveDB(stored);
+    }
+    /**
+     * Create copy of DB by name "COPY{UTC_DATE}" and replace it by new
+     * @param {string} newDB - New DB as string
+     */
+    importDB(newDB) {
+        localStorage.setItem('COPY' + Date.now().toString(), localStorage.getItem('TODO_LIST_DATA_JSON'));
+        localStorage.setItem('TODO_LIST_DATA_JSON', newDB);
     }
     /**
      * Return current DB

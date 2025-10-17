@@ -35,16 +35,33 @@
         </section>
 
         <section id="todo" class="todoTab">
-            <h2>TODO List</h2>
-            <button id="todoListButtonAdd">Добавить</button>
-            <input id="todoListInputToAdd"></input>
-            <button id="todoListButtonCopyDB">Скопировать базу:)</button>
-            <div id="todoListPathView">
+            <!-- <h2>TODO List</h2> -->
+            <div id="todoListPathView" class="todo-path-row-container-class">
                 <!-- results inserted by JS -->
             </div>
+            <div id="todoListCurrentTaskName">
+                <!-- results inserted by JS -->
+            </div>
+            <div id="todoListDescriptionView">
+                <!-- results inserted by JS -->
+            </div>
+            <div id="todoListControlsView" class="todo-controls-container-class">
+                <!-- results inserted by JS -->
+            </div>
+            <!-- <pre id="todoListTaskDescription" class="todo-description-class">
+Описание <b>задачи</b>, мультистрочное
+йцуйцу
+            </pre>
+            <textarea rows="10" id="todoListTaskDescription" class="todo-description-edit-class">
+            </textarea> -->
             <div id="todoListList">
                 <!-- results inserted by JS -->
             </div>
+        </section>
+
+        <section id="settingsTab" class="todoTab">
+            <button id="todoListButtonCopyDB">Экспорт БД в буфер обмена</button>
+            <button id="todoListButtonImportDB">Импортировать БД</button>
         </section>
 
         <section id="about" class="aboutTabClass">
@@ -68,6 +85,7 @@
     <script src="script.js" type="text/javascript"></script>
     <script src="todoStorageClass.js" type="text/javascript"></script>
     <script src="todo.js" type="text/javascript"></script>
+    <script src="settings.js" type="text/javascript"></script>
     <!-- <script src="test.js" type="text/javascript"></script> -->
   </body>
 </html>

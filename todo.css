@@ -1,3 +1,42 @@
+.todo-controls-container-class {
+    padding: 1px;
+    display: flex;
+    gap: 5px;
+}
+
+.todo-description-edit-class {
+    padding: 6px;
+    margin: 10px;
+}
+
+.todo-control-button-class {
+    padding: 6px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 2px solid lightblue;
+    border-radius: 100px;
+    background-color: rgba(173, 216, 230, 0.432);
+    cursor: pointer;
+}
+
+.todo-path-row-container-class {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1px;
+    padding: 4px;
+    padding-top: 10px;
+}
+
+.todo-path-task-name-class {
+    padding: 6px;
+    padding-right: 15px;
+    border: 1px solid lightblue;
+    border-radius: 4px;
+    background-color: rgba(173, 216, 230, 0.432);
+    cursor: pointer;
+}
+
 .todo-row-container {
     display: flex;
     align-items: center;
@@ -10,6 +49,7 @@
 
 .todo-row-text {
     flex-grow: 1;
+    cursor: pointer;
 }
 
 .todo-delete-btn {

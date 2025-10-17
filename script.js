@@ -5,6 +5,7 @@ const overlay = document.getElementById('overlay');
 const tabs = [
     {id : 'pressure', name: 'Перевод давления', element : null},
     {id : 'todo', name: 'TODO-лист', element : null},
+    {id : 'settingsTab', name: 'Настройки', element : null},
     {id : 'about', name: 'О приложении', element : null},
 ]
 
